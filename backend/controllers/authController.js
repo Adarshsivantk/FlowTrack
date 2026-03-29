@@ -4,9 +4,7 @@ import Team from '../models/Team.js';
 
 const cookieOptions = {
   httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
-  sameSite: process.env.NODE_ENV === 'production' ? 'strict' : 'lax',
-  maxAge: 30 * 24 * 60 * 60 * 1000,
+  maxAge: 1 * 60 * 60 * 1000
 };
 
 const generateToken = (id) => {

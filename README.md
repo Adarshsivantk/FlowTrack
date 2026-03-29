@@ -12,7 +12,6 @@
 [![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 ![Version](https://img.shields.io/badge/Version-1.0.0-orange?style=flat-square)
 
 ---
@@ -89,7 +88,6 @@ One command to spin up the entire stack
 - **httpOnly Cookie-based JWT** — tokens are completely inaccessible to JavaScript, preventing XSS attacks
 - Session restoration on page reload via `/auth/me` — seamless UX without storing sensitive data
 - Automatic logout on token expiry with redirect to `/login`
-- Registration does **not** auto-login — manual login required after signup
 - Server-side cookie clearing on logout — zero token persistence after session ends
 
 </details>

@@ -282,7 +282,7 @@ flowtrack/
 
 📹 **Demo Video**
 
-> _[https://drive.google.com/file/d/1hdeGThs4qUiE7IEn46K5mFKAcriWTq2v/view?usp=drive_link]_
+> _[https://drive.google.com/file/d/1hdeGThs4qUiE7IEn46K5mFKAcriWTq2v/view?usp=sharing]_
 
 
 

@@ -28,7 +28,7 @@ const sendTokenResponse = async (user, statusCode, res) => {
   const token = generateToken(user._id);
   res.cookie('token', token, cookieOptions);
   const userData = await withTeamLeadFlag(user);
-  res.status(statusCode).json(userData);
+  res.status(statusCode).json({ ...userData, token }); // ← add token
 };
 
 const register = async (req, res) => {

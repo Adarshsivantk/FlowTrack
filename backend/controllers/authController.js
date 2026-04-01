@@ -4,7 +4,7 @@ import Team from '../models/Team.js';
 
 const cookieOptions = {
   httpOnly: true,
-  maxAge: 1 * 60 * 60 * 1000
+  maxAge: 7 * 24 * 60 * 60 * 1000
 };
 
 const generateToken = (id) => {

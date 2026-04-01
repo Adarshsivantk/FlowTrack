@@ -4,6 +4,8 @@ import Team from '../models/Team.js';
 
 const cookieOptions = {
   httpOnly: true,
+  secure: true,
+  sameSite: 'none',
   maxAge: 7 * 24 * 60 * 60 * 1000
 };
 
@@ -86,8 +88,8 @@ const login = async (req, res) => {
 const logout = (req, res) => {
   res.cookie('token', '', {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: process.env.NODE_ENV === 'production' ? 'strict' : 'lax',
+    secure: true,
+    sameSite: 'none',
     maxAge: 0,
   });
   res.json({ message: 'Logged out successfully' });

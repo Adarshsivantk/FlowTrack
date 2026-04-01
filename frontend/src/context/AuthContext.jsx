@@ -31,12 +31,14 @@ export function AuthProvider({ children }) {
   const login = useCallback(async (email, password) => {
     const { data } = await api.post('/auth/login', { email, password })
     // data includes isTeamLead flag from server
+    localStorage.setItem('token', data.token)
     setUser(data)
     return data
   }, [])
 
   const register = useCallback(async (name, email, password) => {
     const { data } = await api.post('/auth/register', { name, email, password })
+    localStorage.setItem('token', data.token)
     setUser(data)
     return data
   }, [])
@@ -47,6 +49,7 @@ export function AuthProvider({ children }) {
     } catch {
       // ignore
     } finally {
+      localStorage.removeItem('token')
       setUser(null)
     }
   }, [])

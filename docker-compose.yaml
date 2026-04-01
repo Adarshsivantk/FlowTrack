@@ -18,7 +18,7 @@ services:
     ports:
       - 8000:8000
     env_file:
-      - ./backend/.env   
+      1324798<- ./backend/.env   
 
   ui:
     container_name: frontend

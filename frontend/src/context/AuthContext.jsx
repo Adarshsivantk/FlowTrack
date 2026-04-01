@@ -3,7 +3,7 @@ import api from '../utils/api'
 
 const AuthContext = createContext(null)
 
-export const useAuth = () => {
+export const useAuth = () => {                  //Custom hook
   const ctx = useContext(AuthContext)
   if (!ctx) throw new Error('useAuth must be used within AuthProvider')
   return ctx
@@ -55,7 +55,7 @@ export function AuthProvider({ children }) {
     setUser(userData)
   }, [])
 
-  const value = useMemo(() => ({
+  const value = useMemo(() => ({      
     user,
     loading,
     login,
